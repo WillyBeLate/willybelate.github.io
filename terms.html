@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Terms of Service – WillyBeLate Pipeline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow reading column, sticky tab bar switching three hash routes (home, terms, privacy). */
+:root {
+  --bg: #F7F5F2;
+  --surface: #FFFFFF;
+  --fg: #1B1530;
+  --muted: #5E5873;
+  --line: #E4E0EA;
+  --accent: #D9572A;
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15111F; --surface: #1E1830; --fg: #F1ECE4; --muted: #A9A2BC;
+    --line: #2E2742; --accent: #FF8A5C; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15111F; --surface: #1E1830; --fg: #F1ECE4; --muted: #A9A2BC;
+  --line: #2E2742; --accent: #FF8A5C; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.65;
+}
+body::before {
+  content: ""; position: fixed; inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg);
+}
+.wrap {
+  max-width: 44rem; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5;
+  background: var(--bg); border-bottom: 1px solid var(--line);
+}
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-block: 14px; }
+.brand { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--fg); text-decoration: none; }
+.mark { width: 28px; height: 28px; flex: none; }
+nav { display: flex; gap: 4px; flex-wrap: wrap; }
+nav a {
+  font-size: .9rem; font-weight: 500; color: var(--muted); text-decoration: none;
+  padding: 6px 12px; border-radius: 999px;
+}
+nav a:hover { color: var(--fg); }
+nav a[aria-current="page"] { color: var(--fg); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+nav a:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main { padding-block: 40px 64px; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.9rem, 5vw, 2.5rem); line-height: 1.15; margin: 0 0 8px; text-wrap: balance; }
+h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.2rem; margin: 32px 0 6px; text-wrap: balance; }
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 1.2rem; }
+li { margin-bottom: 6px; }
+.meta { color: var(--muted); font-size: .9rem; margin-bottom: 28px; }
+.lead { font-size: 1.1rem; color: var(--fg); }
+a { color: var(--accent); }
+.steps { display: grid; gap: 12px; margin: 24px 0; padding: 0; list-style: none; counter-reset: s; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 2rem 1fr; gap: 8px; margin: 0; }
+.steps li::before { content: counter(s); font-family: var(--font-display); font-weight: 700; color: var(--accent); }
+.note { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; color: var(--muted); }
+code { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: .88em; background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; }
+footer { border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; padding-block: 20px 32px; }
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" fill="none" stroke="var(--accent)" stroke-width="3"/>
+        <line x1="16" y1="16" x2="9" y2="16" stroke="var(--fg)" stroke-width="2.6" stroke-linecap="round"/>
+        <line x1="16" y1="16" x2="20" y2="7.5" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round"/>
+        <circle cx="16" cy="16" r="1.8" fill="var(--accent)"/>
+      </svg>
+      WillyBeLate Pipeline
+    </a>
+    <nav aria-label="Pages">
+      <a href="index.html" data-route="home">About</a>
+      <a href="terms.html" data-route="terms" aria-current="page">Terms of Service</a>
+      <a href="privacy.html" data-route="privacy">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+<main class="wrap">
+<section>
+    <h1>Terms of Service</h1>
+    <p class="meta">Last updated: 10 November 2026</p>
+    <h2>1. Scope</h2>
+    <p>These terms apply to WillyBeLate Pipeline (the "App"), a desktop application developed and used by the content creator WillyBeLate. The App is a personal tool and is not offered to the public.</p>
+    <h2>2. What the App does</h2>
+    <p>The App processes video files that the user owns or has the right to use, and uploads them as drafts to the user's own TikTok account through the TikTok Content Posting API. The App does not publish content on its own. Publishing happens only inside the TikTok app, by the user.</p>
+    <h2>3. User responsibilities</h2>
+    <ul>
+      <li>Only upload content you own or are allowed to use, including music, game footage and the voices or likeness of other people.</li>
+      <li>Follow TikTok's Terms of Service and Community Guidelines, and the rules of any game or roleplay server shown in the content.</li>
+      <li>Keep your TikTok login and the App's local files private.</li>
+    </ul>
+    <h2>4. TikTok connection</h2>
+    <p>The App connects to TikTok only after you log in and grant permission. You can disconnect at any time, either inside the App or in your TikTok settings under apps and services with access to your account.</p>
+    <h2>5. No warranty</h2>
+    <p>The App is provided as is, without warranty of any kind. The developer is not liable for lost data, rejected uploads or account restrictions, except where liability cannot be excluded by law.</p>
+    <h2>6. Third-party services</h2>
+    <p>Use of TikTok is governed by TikTok's own terms and privacy policy. The App is not affiliated with or endorsed by TikTok.</p>
+    <h2>7. Changes</h2>
+    <p>These terms may be updated. The date above shows the latest version.</p>
+    <h2>8. Contact</h2>
+    <p>WillyBeLate, Twitch: <a href="https://www.twitch.tv/willybelate" rel="noopener">twitch.tv/willybelate</a></p>
+  </section>
+</main>
+<footer>
+  <div class="wrap">WillyBeLate Pipeline · Personal creator tool · Not affiliated with TikTok</div>
+</footer>
+</body>
+</html>
